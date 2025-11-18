@@ -1,4 +1,9 @@
 <?php
+// --------------------------------------------------------
+// 1. TAMBAHAN BARU: Mulai Sesi untuk menyimpan status login
+session_start(); 
+// --------------------------------------------------------
+
 // TAMPILKAN SEMUA ERROR (HAPUS KODE INI JIKA SUDAH DEPLOY)
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -24,7 +29,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
         try {
             // 3. Persiapkan Query
-            $sql = "SELECT username, password_hash FROM users WHERE username = :username";
+            // TAMBAHAN BARU: Menarik kolom 'role' untuk kebutuhan sesi/hak akses
+            $sql = "SELECT username, password_hash, role FROM users WHERE username = :username"; 
             $stmt = $pdo->prepare($sql);
             $stmt->execute(['username' => $username]);
             $user = $stmt->fetch();
@@ -34,11 +40,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 // Login Berhasil!
                 $pesan_sukses = "Login berhasil! Selamat datang, " . htmlspecialchars($user['username']) . ".";
                 
-                // --- Bagian Sesi dan Redirect (Buka komentar jika siap) ---
-                // session_start();
-                // $_SESSION['username'] = $user['username'];
-                // header("Location: dashboard.php"); 
-                // exit();
+                // --- Bagian Sesi dan Redirect (Dibuka komentarnya) ---
+                // TAMBAHAN BARU: Blok Sesi Diaktifkan
+                $_SESSION['username'] = $user['username'];
+                $_SESSION['role'] = $user['role']; // Simpan role di sesi
+                header("Location: dashboard.php"); 
+                exit();
                 
             } else {
                 $pesan_error = "Username atau password salah.";
@@ -69,11 +76,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         .message { padding: 10px; margin-bottom: 15px; border-radius: 4px; text-align: center; }
         .error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
         .success { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        /* TAMBAHAN BARU: Style untuk Footer */
+        .footer-text { text-align: center; margin-top: 15px; font-size: 0.8em; color: #777; }
     </style>
 </head>
 <body>
     <div class="login-container">
-        <h3>Login Praktikum aja</h3>
+        <h3>Login Praktikum Aja</h3>
 
         <?php 
         if ($pesan_error) {
@@ -94,6 +103,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
             <button type="submit" class="btn-login">Login</button>
         </form>
+        
+        <p class="footer-text">&copy; <?php echo date("Y"); ?> Praktikum Tim Semangat. Versi 1.1</p>
     </div>
 </body>
 </html>
