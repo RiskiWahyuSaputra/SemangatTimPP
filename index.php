@@ -92,6 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <input type="password" id="password" name="password" required>
             </div>
             <button type="submit" class="btn-login">Login</button>
+            <button type="submit" class="btn-login">Registrasi</button>
         </form>
     </div>
 </body>
