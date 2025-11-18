@@ -1,15 +1,8 @@
 <?php
-// --------------------------------------------------------
-<<<<<<< HEAD
 // 1. TAMBAHAN BARU: Mulai Sesi untuk menyimpan status login
 session_start(); 
 // --------------------------------------------------------
 
-=======
-// TAMBAHAN BARU: Mulai Sesi untuk menyimpan status login
-session_start(); 
-// --------------------------------------------------------
->>>>>>> 22d2d1577fa4810f60fe3f77ce234e92518b793d
 // TAMPILKAN SEMUA ERROR (HAPUS KODE INI JIKA SUDAH DEPLOY)
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
