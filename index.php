@@ -1,9 +1,15 @@
 <?php
 // --------------------------------------------------------
+<<<<<<< HEAD
 // 1. TAMBAHAN BARU: Mulai Sesi untuk menyimpan status login
 session_start(); 
 // --------------------------------------------------------
 
+=======
+// TAMBAHAN BARU: Mulai Sesi untuk menyimpan status login
+session_start(); 
+// --------------------------------------------------------
+>>>>>>> 22d2d1577fa4810f60fe3f77ce234e92518b793d
 // TAMPILKAN SEMUA ERROR (HAPUS KODE INI JIKA SUDAH DEPLOY)
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -82,8 +88,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 <body>
     <div class="login-container">
+<<<<<<< HEAD
         <h3>Login Praktikum Aja</h3>
 
+=======
+                          <h2>Login Sistem Pelaksanaan</h2>
+>>>>>>> 22d2d1577fa4810f60fe3f77ce234e92518b793d
         <?php 
         if ($pesan_error) {
             echo "<div class='message error'>$pesan_error</div>";
@@ -102,6 +112,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <input type="password" id="password" name="password" required>
             </div>
             <button type="submit" class="btn-login">Login</button>
+            <button type="submit" class="btn-login">Registrasi</button>
         </form>
         
         <p class="footer-text">&copy; <?php echo date("Y"); ?> Praktikum Tim Semangat. Versi 1.1</p>
