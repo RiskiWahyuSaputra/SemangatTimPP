@@ -73,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 <body>
     <div class="login-container">
-        <h2>Login Praktikum</h2>
+        <h2>Login Praktikum Pengganti</h2>
 
         <?php 
         if ($pesan_error) {
