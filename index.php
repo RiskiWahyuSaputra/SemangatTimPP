@@ -73,7 +73,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 <body>
     <div class="login-container">
+<<<<<<< HEAD
         <h2>Login Sistem Pelaksanaan Praktikum</h2>
+=======
+        <h3>Login Praktikum aja</h3>
+>>>>>>> a7607682ada1dfcf7318541f4baa27d0b20f552f
 
         <?php 
         if ($pesan_error) {
