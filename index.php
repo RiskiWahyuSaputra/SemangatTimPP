@@ -77,7 +77,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 <body>
     <div class="login-container">
-                          <h2>Login Sistem Pelaksanaan</h2>
+        <h2>Login Sistem Pelaksanaan</h2>
+        <p style="text-align:center; color:gray; font-size: 12px;">
+            Sistem ini digunakan untuk kegiatan praktikum mahasiswa Politeknik Negeri Lampung.
+        </p>
+
         <?php 
         if ($pesan_error) {
             echo "<div class='message error'>$pesan_error</div>";
