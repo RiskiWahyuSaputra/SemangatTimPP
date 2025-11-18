@@ -74,6 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
     <div class="login-container">
         <h2>Login Terlebih Dahulu</h2>
+        <h3>Klik OK Terdahulu</h3>
 
         <?php 
         if ($pesan_error) {
