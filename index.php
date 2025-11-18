@@ -73,10 +73,39 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </style>
 </head>
 <body>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<div class="login-container">
+        <h2>Login Sistem Pelaksanaan Praktikum</h2>
+        <p style="text-align:center; color:gray; font-size: 12px;">
+            Sistem ini digunakan untuk kegiatan praktikum mahasiswa Politeknik Negeri Lampung.
+        </p>
+    </div>
+      <?php 
     <div class="login-container">
                           
         <h2>Login Sistem Pelaksanaan</h2>
         <h3>Klik OK terdahulu</h3>
+=======
+    <div class="login-container">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <h2>Login Sistem Pelaksanaan</h2>
+        <p style="text-align:center; color:gray; font-size: 12px;">
+            Sistem ini digunakan untuk kegiatan praktikum mahasiswa Politeknik Negeri Lampung.
+        </p>
+=======
+
+        <h2>Login Terlebih Dahulu</h2>
+        <h3>Klik OK Terdahulu</h3>
+>>>>>>> 88bb19aab185e633e9743d5ea229f079ea80c281
+
+=======
+                          
+        <h2>Login Sistem Pelaksanaan</h2>
+        <h3>Klik OK terdahulu</h3>
+>>>>>>> 5d0f578e6c6e9f4860c8d576e2e4ae092c0b223e
+>>>>>>> AlmaRahmatiaNingrum
         <?php 
         if ($pesan_error) {
             echo "<div class='message error'>$pesan_error</div>";
