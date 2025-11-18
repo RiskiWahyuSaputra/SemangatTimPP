@@ -73,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 <body>
     <div class="login-container">
-        <h2>ini Login Praktikum Pengganti Polinela</h2>
+        <h2>Login Terlebih Dahulu</h2>
         <?php 
         if ($pesan_error) {
             echo "<div class='message error'>$pesan_error</div>";
