@@ -1,4 +1,8 @@
 <?php
+// --------------------------------------------------------
+// TAMBAHAN BARU: Mulai Sesi untuk menyimpan status login
+session_start(); 
+// --------------------------------------------------------
 // TAMPILKAN SEMUA ERROR (HAPUS KODE INI JIKA SUDAH DEPLOY)
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -72,10 +76,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </style>
 </head>
 <body>
-    <div class="login-container">
-
+<div class="login-container">
         <h2>Login Sistem Pelaksanaan Praktikum</h2>
-        <?php 
+        <p style="text-align:center; color:gray; font-size: 12px;">
+            Sistem ini digunakan untuk kegiatan praktikum mahasiswa Politeknik Negeri Lampung.
+        </p>
+    </div>
+      <?php 
         if ($pesan_error) {
             echo "<div class='message error'>$pesan_error</div>";
         } elseif ($pesan_sukses) {
