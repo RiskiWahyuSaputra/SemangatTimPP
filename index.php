@@ -73,12 +73,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 <body>
     <div class="login-container">
-<<<<<<< HEAD
-        <h2>Login Sistem Pelaksanaan Praktikum</h2>
-=======
-        <h3>Login Praktikum aja</h3>
->>>>>>> a7607682ada1dfcf7318541f4baa27d0b20f552f
 
+        <h2>Login Sistem Pelaksanaan Praktikum</h2>
         <?php 
         if ($pesan_error) {
             echo "<div class='message error'>$pesan_error</div>";
@@ -97,6 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <input type="password" id="password" name="password" required>
             </div>
             <button type="submit" class="btn-login">Login</button>
+            <button type="submit" class="btn-login">Registrasi</button>
         </form>
     </div>
 </body>
