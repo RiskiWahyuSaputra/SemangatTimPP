@@ -1,8 +1,4 @@
 <?php
-// --------------------------------------------------------
-// TAMBAHAN BARU: Mulai Sesi untuk menyimpan status login
-session_start(); 
-// --------------------------------------------------------
 // TAMPILKAN SEMUA ERROR (HAPUS KODE INI JIKA SUDAH DEPLOY)
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
