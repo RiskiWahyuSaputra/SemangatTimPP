@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hello world</h1>
-    <h1>PP TIm</h1>
-</body>
-</html>
+<?php echo "Riski Wahyu Saputra" ?>
+<?php echo "Nauval Tazzaky" ?>
+<?php echo "Alma Rahmatia Ningrum" ?>
+<?php echo "Zalfa Zain" ?>
